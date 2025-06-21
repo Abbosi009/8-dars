@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #00c9ff, #92fe9d);
+  padding: 30px;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main extra"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
+}
+
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+main {
+  grid-area: main;
+}
+
+.extra {
+  grid-area: extra;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.container > * {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  font-size: 1.4rem;
+  color: #333;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.container > *:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
