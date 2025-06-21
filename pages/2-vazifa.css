@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "menu"
+    "hero"
+    "main"
+    "banner"
+    "extra"
+    "image";
+}
+
+header { background: #0b162d; color: #fff; grid-area: header; padding: 20px; }
+nav { background: #ec3d4b; color: #fff; grid-area: menu; padding: 20px; }
+.hero { background: #4d90d6; color: #fff; grid-area: hero; padding: 20px; }
+main { background: #0b162d; color: #fff; grid-area: main; padding: 20px; }
+.banner { background: #f6cb44; color: #000; grid-area: banner; padding: 20px; }
+.extra { background: #38c694; color: #fff; grid-area: extra; padding: 20px; }
+.image { background: #c8ebeb; color: #000; grid-area: image; padding: 20px; }
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  body {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      "header header header"
+      "hero hero hero"
+      "menu main main"
+      "menu banner image"
+      "menu extra image";
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      "header header menu"
+      "hero hero hero"
+      "main main image"
+      "banner banner image"
+      "extra extra image";
+  }
+}

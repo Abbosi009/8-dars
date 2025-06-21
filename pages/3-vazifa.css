@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "menu main ad1"
+    "menu main ad1"
+    "footer footer footer";
+}
+
+header {
+  background: #1447e6;
+  grid-area: header;
+  color: #fff;
+  padding: 20px;
+}
+
+.menu {
+  background: #3856c4;
+  grid-area: menu;
+  color: #fff;
+  padding: 20px;
+}
+
+.ad2 {
+  background: #6076d1;
+  grid-area: menu; /* Note: ad2 shares menu space for simplicity */
+  margin-top: 150px; /* To visually separate */
+  color: #fff;
+  padding: 20px;
+}
+
+main {
+  background: #6d87e6;
+  grid-area: main;
+  color: #fff;
+  padding: 20px;
+}
+
+.ad1 {
+  background: #4b6cc4;
+  grid-area: ad1;
+  color: #fff;
+  padding: 20px;
+}
+
+footer {
+  background: #1447e6;
+  grid-area: footer;
+  color: #fff;
+  padding: 20px;
+}

@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "widget"
+    "footer";
+}
+
+
+header { background: #4aa0e6; grid-area: header; padding: 20px; }
+main { background: #70c247; grid-area: main; padding: 20px; }
+aside { background: #b86be4; grid-area: widget; padding: 20px; }
+footer { background: #0366d6; grid-area: footer; padding: 20px; }
+
+@media (min-width: 768px) {
+  body {
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-areas:
+      "header main widget"
+      "footer footer footer";
+  }
+}
